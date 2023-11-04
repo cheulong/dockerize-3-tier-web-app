@@ -1,6 +1,6 @@
 FROM node:19.6-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/api
 
 COPY package*.json ./
 
@@ -8,7 +8,7 @@ RUN npm install
 
 USER node 
 
-COPY --chown=node:node ./src .
+COPY --chown=node:node ./ .
 
 EXPOSE 3000
 

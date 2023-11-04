@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  api:
+    build: ./server
+    container_name: server_c
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./server:/usr/src/api
+      - /usr/src/api/node_modules
