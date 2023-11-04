@@ -8,3 +8,9 @@ services:
     volumes:
       - ./server:/usr/src/api
       - /usr/src/api/node_modules
+  myblog:
+    build: ./myblog
+    container_name: myblog_c
+    ports:
+      - "5173:5173"
+    stdin_open: true
